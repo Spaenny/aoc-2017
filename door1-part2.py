@@ -11,7 +11,7 @@ halfway=len(codestr)//2
 
 for i in range(0, halfway):
     #is cur position and the "next" the same
-    if codestr[i] == codestr[i + halfway]:
+    if codestr[i] == codestr[i + halfway % len(codestr)]:
         #add them together
         sum += int(codestr[i]) * 2
 

@@ -9,17 +9,13 @@ codestr=str(code)
 sum=0
 i=0
 
-while i < len(codestr) - 1:
+for i in range(0, len(codestr)):
     #check if cur and next is the same
-    if codestr[i] == codestr[i + 1]:
+    if codestr[i] == codestr[(i + 1) % len(codestr)]:
         sum += int(codestr[i])
 
     #add up our helper
     i += 1
-
-#check if first and last are also the same
-if codestr[0] == codestr[len(codestr) - 1]:
-    sum += int(codestr[0])
 
 #print our result
 print("The result is: " + str(sum))
