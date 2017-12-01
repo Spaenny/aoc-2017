@@ -10,7 +10,6 @@ sum=0
 halfway=len(codestr)//2
 
 for i in range(0, len(codestr)):
-    print(i)
     #is cur position and the "next" the same
     if codestr[i] == codestr[(i + halfway) % len(codestr)]:
         #add them together
