@@ -9,11 +9,12 @@ codestr=str(code)
 sum=0
 halfway=len(codestr)//2
 
-for i in range(0, halfway):
+for i in range(0, len(codestr)):
+    print(i)
     #is cur position and the "next" the same
-    if codestr[i] == codestr[i + halfway % len(codestr)]:
+    if codestr[i] == codestr[(i + halfway) % len(codestr)]:
         #add them together
-        sum += int(codestr[i]) * 2
+        sum += int(codestr[i])
 
 #output the result
 print("The result is: " + str(sum))
