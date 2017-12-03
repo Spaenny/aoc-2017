@@ -21,7 +21,6 @@ lines = spreadsheet.split("\n")
 for i in range(0, len(lines)):
     lines[i] = lines[i].split("\t")
    
-resultlist = []
 for line in lines:  
     biggest = line[0]
     lowest = line[0]
@@ -31,10 +30,7 @@ for line in lines:
         if int(num) < int(lowest):
             lowest = num
     
-    diff = int(biggest) - int(lowest)
-    resultlist.append(diff)
-
-for num in resultlist:
-    result += num
+    result += int(biggest) - int(lowest)
+    
 
 print(result)
